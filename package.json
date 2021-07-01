@@ -1,0 +1,30 @@
+{
+  "name": "@ceski23/esbuild-plugin-simple-reload",
+  "version": "1.0.0",
+  "description": "Simple esbuild plugin to reload website after every rebuild",
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "typings": "lib/index.d.ts",
+  "files": ["lib"],
+  "scripts": {
+    "build": "rollup -c",
+    "prepare": "npm run build"
+  },
+  "author": "Cezary Bober",
+  "license": "Unlicense",
+  "devDependencies": {
+    "@types/ws": "^7.4.5",
+    "rollup": "^2.52.6",
+    "rollup-plugin-dts": "^3.0.2",
+    "rollup-plugin-esbuild": "^4.5.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.2",
+    "esbuild": "^0.12.13",
+    "ws": "^7.5.1"
+  },
+  "publishConfig": {
+    "@ceski23:registry": "https://npm.pkg.github.com"
+  }
+}
